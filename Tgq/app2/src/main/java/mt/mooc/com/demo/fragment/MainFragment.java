@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.List;
+
 import mt.mooc.com.demo.R;
 import mt.mooc.com.demo.adapter.MenuOptionAdapter;
 import mt.mooc.com.demo.util.DataUtil;
@@ -32,7 +34,7 @@ public class MainFragment extends Fragment {
     protected int menuIcons[]={R.mipmap.menu_airport,R.mipmap.menu_hatol,
             R.mipmap.menu_trav,R.mipmap.menu_nearby,
             R.mipmap.menu_ticket,R.mipmap.menu_car,
-            R.mipmap.menu_course,};
+            R.mipmap.menu_course,R.mipmap.menu_trav};
     //ads
     protected int addIcons[]={R.mipmap.header_pic_ad1,R.mipmap.header_pic_ad2,
             R.mipmap.header_pic_ad1};
@@ -66,10 +68,13 @@ public class MainFragment extends Fragment {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            ImageView  imageView=new ImageView(getActivity());
-            imageView.setImageResource(addIcons[position]);
+
+          View itemView=  LayoutInflater.from(getActivity()).inflate(R.layout.item_header_ad,null);
+            ImageView  imageView= (ImageView) itemView.findViewById(R.id.img_header_ad);
+            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            imageView.setBackgroundResource(addIcons[position]);
             container.addView(imageView);
-            return imageView;
+            return itemView;
         }
 
         @Override

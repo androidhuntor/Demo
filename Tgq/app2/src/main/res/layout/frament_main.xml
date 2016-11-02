@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/frame_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
@@ -14,16 +15,18 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/vpager_ad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
 
         </android.support.v4.view.ViewPager>
-    </RelativeLayout>
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_below="@+id/frame_header"
+        >
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycleview_menu_option"
@@ -32,12 +35,9 @@
 
         </android.support.v7.widget.RecyclerView>
 
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="3dp"
-         android:background="#ff00cc"></View>
+
 
     </ScrollView>
 
 
-</LinearLayout>
+</RelativeLayout>
