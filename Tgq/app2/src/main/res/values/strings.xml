@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+    <string-array name="menu_option_name">
+        <item>飛機票</item>
+        <item>住酒店</item>
+        <item>去旅遊</item>
+        <item>周邊遊</item>
+        <item>買門票</item>
+        <item>火車票</item>
+        <item>汽車票</item>
+        <item>領里程</item>
+
+    </string-array>
+</resources>
