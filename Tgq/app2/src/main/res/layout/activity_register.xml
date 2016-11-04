@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mt.mooc.com.demo.RegisterActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/register_header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#008CC9">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="直接登录"
+            android:textColor="#ffffff"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="30sp"
+            android:background="@null"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/group_register_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_header">
+
+        <LinearLayout
+            android:id="@+id/layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+86"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#008AC8"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入您的手机号"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:background="@null"
+               />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7BBBE"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/layout_username"
+            android:layout_marginTop="10dp"></View>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_register_ver_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_register_username">
+
+        <LinearLayout
+            android:id="@+id/layout_ver_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/phone_verfy"
+                />
+            <EditText
+                android:id="@+id/edt_ver_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入验证码"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20sp"
+                android:background="@null"
+                android:gravity="center"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textSize="20sp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:textColor="#008AC8"
+                android:gravity="bottom"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B7BBBE"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/layout_ver_code"
+            android:layout_marginTop="10dp"></View>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:textSize="24sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#F4F5F7"
+        android:layout_below="@+id/group_register_ver_code"/>
+
+    <TextView
+        android:id="@+id/txt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册即视为同意"
+        android:layout_below="@+id/btn_register"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="80dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="慕淘服务协议"
+        android:layout_below="@+id/btn_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#2999CE"
+        android:layout_toRightOf="@+id/txt_ok"
+        />
+</RelativeLayout>
